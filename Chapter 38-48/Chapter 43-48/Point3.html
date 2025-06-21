@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Mouseover</title>
+</head>
+<body>
+
+<img 
+  src="./images/1f5de2d7f22e96e59e13b16c6c52e1c6.jpg" 
+  id="myImage" 
+  onmouseover="changeImage()" 
+  onmouseout="resetImage()" 
+  width="300" 
+  height="350"
+/>
+
+<script>
+  function changeImage() {
+    document.getElementById("myImage").src = "./images/d0504b4aedd3c542d2bf75b0aab20ea5.jpg";
+  }
+
+  function resetImage() {
+    document.getElementById("myImage").src = "./images/1f5de2d7f22e96e59e13b16c6c52e1c6.jpg";
+  }
+</script>
+
+</body>
+</html>

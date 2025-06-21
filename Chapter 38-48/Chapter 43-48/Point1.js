@@ -1,0 +1,1 @@
+<a href="#" onclick="alert('You clicked the link!')">Click Me</a>

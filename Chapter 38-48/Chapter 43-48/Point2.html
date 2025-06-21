@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Records</title>
+  <style>
+    table {
+      width: 50%;
+      border-collapse: collapse;
+      margin: 20px auto;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 8px;
+      text-align: center;
+    }
+    button {
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <table id="studentTable">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Rows will be inserted by JavaScript -->
+    </tbody>
+  </table>
+
+  <script>
+    let students = [
+      "John", "Sarah", "Mike", "Anna", "David",
+      "Lisa", "Tom", "Mark", "Sophie", "James"
+    ];
+
+    let tbody = document.querySelector("#studentTable tbody");
+
+    students.forEach((name, index) => {
+      let row = document.createElement("tr");
+
+      row.innerHTML = `
+        <td>${index + 1}</td>
+        <td>${name}</td>
+        <td><button onclick="deleteRow(this)">Delete</button></td>
+      `;
+
+      tbody.appendChild(row);
+    });
+
+    function deleteRow(button) {
+      let row = button.parentElement.parentElement;
+      row.remove();
+    }
+  </script>
+
+</body>
+</html>
